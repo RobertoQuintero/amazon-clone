@@ -12,10 +12,9 @@ import Payment from "./components/payment/Payment";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import Orders from "./components/orders/Orders";
+import { LOAD_STRIPE } from "../config";
 
-const promise = loadStripe(
-  "pk_test_51HR1rTCI3K9W8ngJPOY21I7WDB3k9QMN9fNd4JOFEq3qZOi1m2TJcmS4VN9NiIyC9guTX55rCXmEeYdMdrWk8crv00sHMl6ItO"
-);
+const promise = loadStripe(LOAD_STRIPE);
 
 const App = () => {
   const [{ basket, user }, dispatch] = useStateValue();
